@@ -22,6 +22,7 @@
 #xiongying
 #date：2017.2.10
 从Git上clone代码到本地，然后作为Maven工程导入到Myeclipse中时遇到了以下问题：
+
 1.Maven编译报错，找不到sqljdbc4-4.0.jar文件
 解决：手动下载该sqljdbc4-4.0.jar文件，使用maven进行安装，具体参考：http://outofmemory.cn/code-snippet/10750/sqljdbc-add-to-maven
 
