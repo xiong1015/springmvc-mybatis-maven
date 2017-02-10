@@ -27,6 +27,7 @@
 解决：手动下载该sqljdbc4-4.0.jar文件，使用maven进行安装，具体参考：http://outofmemory.cn/code-snippet/10750/sqljdbc-add-to-maven
 
 2.修改spring-servlet-context.xml中有关数据库连接的配置
+
 <beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <beans:property name="configLocation" value="classpath:/config/spring-mybatis-config.xml" />
         <beans:property name="dataSource" ref="dataSourceAll" />
@@ -34,6 +35,7 @@
 将ref="dataSourceAll"修改为ref="mysqlTestSource"
 
 3.源代码中注释了获取userList值，导致程序启动后访问首页报错userList为null
+
 解决：HomeController.java中将 
 ArrayList<User> users=service.getAllUsers();
 mv.addObject("userList",users);
